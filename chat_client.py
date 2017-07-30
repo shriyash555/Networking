@@ -32,6 +32,8 @@ except Exception,msg:
   print msg
 
 """
+#This is the code I have written in the first place
+
 while(True):
   #TODO client thread no. 1 will handle sending of message from client to server
   message = raw_input("Me : ")

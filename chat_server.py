@@ -34,6 +34,7 @@ except Exception,msg:
 
 """
 while(True):
+#This is the code I have written in the first place
 
   #TODO server thread no. 1 will handle receiving message from client.
   message = conn.recv(4096)
