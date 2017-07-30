@@ -7,7 +7,7 @@ def receive_message():
     print message
 
     if "bye" in message.lower():
-      exit()
+      exit(0)
 
 def send_message():
   responce = raw_input("Me : ")
@@ -15,14 +15,14 @@ def send_message():
   conn.sendall(responce)
 
   if "bye" in responce.lower():
-    exit()
+    exit(0)
 
 chat_server = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 host = "localhost"
 host_ip = socket.gethostbyname(host)
 port = 1234
 chat_server.bind((host_ip,port))
-chat_server.listen(1)
+chat_server.listen(10)
 conn , addr = chat_server.accept()
 
 try:

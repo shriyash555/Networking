@@ -7,8 +7,8 @@ def send_message():
     message = "Client : " + message
     chat_client.sendall(message)
     
-    if "bye" in responce.lower():
-      exit()
+    if "bye" in message.lower():
+      exit(0)
 
 def receive_message():
   while(True):
@@ -16,7 +16,7 @@ def receive_message():
     print responce
 
     if "bye" in responce.lower():
-      exit()
+      exit(0)
 
 chat_client = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 host = "localhost"
